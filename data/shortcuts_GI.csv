@@ -1,0 +1,22 @@
+﻿order,filter,key,label,category,cat_label,cat_num
+1,,allcases,All cases,overall,All cases,1
+3,as.numeric(infector_age)<30,agegrp1r,Infector under 30,age,Age group,2
+4,as.numeric(infector_age) %in% mid,agegrp2r,Infector aged 30-59,age,Age group,2
+5,as.numeric(infector_age)>=60,agegrp3r,Infector ages 60+,age,Age group,2
+6,as.numeric(infectee_age)<30,agegrp1e,Infectee under 30,age,Age group,2
+7,as.numeric(infectee_age) %in% mid,agegrp2e,Infectee aged 30-59,age,Age group,2
+8,as.numeric(infectee_age)>=60,agegrp3e,Infectee ages 60+,age,Age group,2
+10,"infector_sex==""F""",femaleinfectors,Female infectors,sex,Sex,3
+11,"infector_sex==""M""",maleinfectors,Male infectors,sex,Sex,3
+12,"infectee_sex==""F""",femaleinfectees,Female infectees,sex,Sex,3
+13,"infectee_sex==""M""",maleinfectees,Male infectees,sex,Sex,3
+15,"contact_type==""Household""",hh,Household,contact,Contact type,4
+16,"contact_type==""Social""",social,Social contact,contact,Contact type,4
+17,"contact_type==""Community""",community,Community,contact,Contact type,4
+19,"wave==""Wave 1""",wave1,Wave 1,wave,Wave,5
+20,"wave==""Wave 2""",wave2,Wave 2,wave,Wave,5
+21,"wave==""Wave 3""",wave3,Wave 3,wave,Wave,5
+23,"grepl(""Cluster"", link_basis)",linkcluster,Cluster-related,detection,Detection type,6
+24,"grepl(""Domestic contact"", link_basis)",linkcontact,Contact chain-related,detection,Detection type,6
+25,"grepl(""Domestic travel"", link_basis)",linktravel,Domestic travel-related,detection,Detection type,6
+26,"grepl(""International travel"", link_basis)",linkimport,Imported,detection,Detection type,6
