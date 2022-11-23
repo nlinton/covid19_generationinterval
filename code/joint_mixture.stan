@@ -69,7 +69,8 @@ transformed parameters {
     vector<lower = 0>[2] sigma; // SDs of GI and IP
 
     real theta_normal = inv_logit(theta_normal_raw); // theta_normal is between zero and one
-    real tau = asin(2. * theta_normal / pi()); // Kendalls tau
+    //real tau = asin(2. * theta_normal / pi()); // Kendalls tau
+    real tau = 2. / pi() * asin(theta_normal); // from this formula
 
     vector[D] param1[2];
     vector[D] param2[2];
